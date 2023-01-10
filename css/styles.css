@@ -576,6 +576,7 @@ img {
   width: 408px;
   min-height: 576px;
   padding: 24px;
+  padding-top: 72px;
 
   background-color: #fcfcfc;
   border-radius: 4px;
@@ -610,17 +611,17 @@ img {
   cursor: pointer;
 }
 
+.modal-btn:hover,
+.modal-btn:focus,
 .modal-btn:active {
   background-color: var(--accent-active-color);
   border-color: transparent;
 }
 
+.modal-btn:hover .modal-icon,
+.modal-btn:focus .modal-icon,
 .modal-btn:active .modal-icon {
   fill: var(--primary-white-color);
-}
-
-.callback-form {
-  margin-top: 48px;
 }
 
 .callback-form-title {
@@ -632,21 +633,32 @@ img {
   color: var(--title-text-color);
 }
 
+.callback-form-group {
+  margin-bottom: 16px;
+}
+
 .callback-form-field {
   position: relative;
   display: block;
+}
+
+.callback-form-field:not(:last-child) {
   margin-bottom: 8px;
 }
 
 .callback-form-label {
   display: block;
-  margin-bottom: 4px;
 
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.01em;
 
   color: var(--default-svg-color);
+}
+
+.callback-form-label span {
+  display: inline-block;
+  margin-bottom: 4px;
 }
 
 .callback-form-label:focus-within {
@@ -691,6 +703,7 @@ img {
   width: 100%;
   height: 120px;
   resize: none;
+  display: block;
 
   padding: 8px 16px;
   font-size: 16px;
